@@ -1,7 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+dotenv.config({
+    path: './.env'
+});
 const cors = require('cors');
-// const db = require('./db');
+const db = require('./Database/MongoDB');
+
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
